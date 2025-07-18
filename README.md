@@ -1,4 +1,4 @@
-# Employee Management System (EMS) 
+# Employee Management System (EMS)
 
 A modern, responsive web application for managing employees, admins, and projects within an organization. Built with **React.js (Vite)**, **Ant Design**, and a secure backend API, this project demonstrates robust frontend architecture, clean UI/UX, and seamless integration with RESTful services.
 
@@ -19,6 +19,8 @@ A modern, responsive web application for managing employees, admins, and project
 - **Context API** for global state management
 - **RESTful API integration** with Axios
 - **Modern codebase** using React Hooks and Vite
+- **Cloud deployment on Google Cloud Platform (GCP)**
+- **Containerized with Docker for easy deployment and scalability**
 
 ---
 
@@ -43,10 +45,12 @@ Here are some screenshots showcasing the Employee Management System (EMS) app:
 - **Ant Design**
 - **React Context API**
 - **Axios**
+- **Google Cloud Platform (GCP)**
+- **Docker**
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the repository
 
@@ -111,6 +115,8 @@ src/
 - **Project Management:** List and view project details.
 - **Download Waypoints:** Export employee waypoints as KMZ files.
 - **Responsive Dashboard:** Optimized for all devices.
+- **Cloud Deployment:** Easily deployable on GCP.
+- **Containerization:** Docker support for consistent environments.
 
 ---
 
@@ -120,9 +126,8 @@ src/
 Software Developer passionate about building scalable and beautiful web applications.
 
 - **Email:** heyitspoojasahu@gmail.com
+- **Cloud & DevOps:** Experienced with Google Cloud Platform (GCP) and Docker for deploying and managing scalable applications.
 
 ---
 
-## ⭐️ If you like this project, please star the repository and connect with me!
-
----
+## ⭐️ If you like this project, please star the repository and connect
