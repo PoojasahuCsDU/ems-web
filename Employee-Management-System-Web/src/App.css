@@ -1,0 +1,894 @@
+/* app.css - Global Styles with Inter font only */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/*---------------------------------
+  1. RESET & BASE STYLES
+---------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*---------------------------------
+  2. TYPOGRAPHY HELPERS
+---------------------------------*/
+.font-regular {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semi-bold {
+  font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
+}
+
+/*---------------------------------
+  3. COLOR VARIABLES
+---------------------------------*/
+:root {
+  --primary-color: #fb8500;
+  --primary-hover: #d97300;
+  --text-dark: #2c3e50;
+  --text-light: #7f8c8d;
+  --bg-light: #f9f9f9;
+  --bg-white: #ffffff;
+  --error-color: #ff4d4f;
+  --error-bg: #fff2f0;
+  --error-border: #ffccc7;
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --hover-bg: #f0f2f5;
+  --sidebar-width: 240px;
+  --sidebar-width-mobile: 60px;
+}
+
+/*---------------------------------
+  4. BUTTON STYLES
+---------------------------------*/
+.login-btn,
+.primary-btn,
+.btn-primary {
+  width: 100%;
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: white !important;
+  font-family: "Inter", sans-serif;
+}
+
+.login-btn:hover,
+.login-btn:focus,
+.primary-btn:hover,
+.primary-btn:focus,
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+  color: white !important;
+}
+
+/* Admin action button */
+.admin-action-btn {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+.admin-action-btn:hover,
+.admin-action-btn:focus {
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+}
+
+/*---------------------------------
+  5. LOGIN PAGE STYLES
+---------------------------------*/
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px;
+}
+
+.title,
+.title-text {
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: #000000;
+}
+
+.login-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.Logo-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.add-admin-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/*---------------------------------
+  6. DASHBOARD LAYOUT
+---------------------------------*/
+/* Dashboard Stats Section */
+/* Dashboard Stats Section - Updated */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  padding: 20px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 20px;
+  height: 100px;
+  box-shadow: var(--shadow-medium);
+  transition: transform 0.3s ease;
+}
+
+/* Rest of your existing CSS remains the same */
+.custom-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.stat-content h5 {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.stat-number {
+  margin: 8px 0 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--bg-light);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--bg-white);
+  box-shadow: var(--shadow-light);
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-left h1 {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.company-logo {
+  height: 40px;
+  width: auto;
+}
+
+/*---------------------------------
+  7. USER PROFILE & DROPDOWN
+---------------------------------*/
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.user-profile:hover {
+  background-color: var(--hover-bg);
+}
+
+.profile-image {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdown-icon {
+  transition: transform 0.2s;
+}
+
+.dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--bg-white);
+  border-radius: 4px;
+  box-shadow: var(--shadow-medium);
+  width: 200px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: var(--hover-bg);
+}
+
+.dropdown-item .dropdown-icon {
+  color: var(--text-light);
+}
+
+/*---------------------------------
+  8. SIDEBAR NAVIGATION
+---------------------------------*/
+.dashboard-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--bg-white);
+  padding: 1.5rem 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #515151;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sidebar li:hover {
+  background-color: var(--primary-hover);
+}
+
+.sidebar li.active {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.nav-icon {
+  font-size: 1.25rem;
+}
+
+/*---------------------------------
+  9. MAIN CONTENT AREA
+---------------------------------*/
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.content-section {
+  padding: 20px;
+}
+
+.content-section h2,
+.content-section h4 {
+  color: var(--text-dark);
+  margin-top: 0;
+}
+
+/*---------------------------------
+  10. CARDS & STATS
+---------------------------------*/
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-light);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--text-dark);
+}
+
+.card p {
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.stat-card {
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-light);
+}
+
+.stat-card h3,
+.stat-card h5 {
+  margin-top: 0;
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.stat-card p {
+  color: var(--text-dark);
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0 0;
+}
+
+/*---------------------------------
+  11. TABLE STYLES
+---------------------------------*/
+.ant-table {
+  background: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-medium);
+}
+
+.search-add-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+/*---------------------------------
+  12. STATUS & MESSAGES
+---------------------------------*/
+.loading {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+.info-message {
+  background-color: var(--bg-white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: var(--text-light);
+  text-align: center;
+  box-shadow: var(--shadow-light);
+}
+
+.error-message {
+  color: var(--error-color);
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  background-color: var(--error-bg);
+  border: 1px solid var(--error-border);
+  border-radius: 4px;
+  text-align: center;
+}
+
+/*---------------------------------
+  13. RESPONSIVE STYLES
+---------------------------------*/
+@media (max-width: 992px) {
+  .form-container {
+    max-width: 800px;
+  }
+
+  .login-image {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 600px;
+  }
+
+  .image-container {
+    order: 2;
+    flex: 1 1 100% !important;
+    margin-top: 20px;
+  }
+
+  .form-content {
+    order: 1;
+    flex: 1 1 100% !important;
+  }
+
+  .login-image {
+    max-height: 300px;
+  }
+
+  .sidebar {
+    width: var(--sidebar-width-mobile);
+    padding: 1rem 0;
+  }
+
+  .sidebar span {
+    display: none;
+  }
+
+  .sidebar li {
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .search-add-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ant-input-search {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 10px;
+  }
+
+  .form-container {
+    margin: 10px;
+  }
+
+  .Logo-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .add-admin-image {
+    max-height: 300px;
+  }
+}
+.cards-container {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.project-card {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+/*---------------------------------
+  15. EMPLOYEE MANAGEMENT STYLES
+---------------------------------*/
+
+/* Employee Table Styles */
+.employee-table {
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 16px;
+  background-color: var(--bg-white);
+  box-shadow: var(--shadow-light);
+}
+
+.table-header {
+  display: flex;
+  background-color: #fafafa;
+  padding: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-cell {
+  padding: 0 8px;
+}
+
+.table-row {
+  display: flex;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row:hover {
+  background-color: #fafafa;
+}
+
+.employee-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar-container {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.employee-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Employee Cards (Mobile View) */
+.employee-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.employee-card {
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+}
+
+.employee-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.employee-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-details h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.employee-details p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.employee-card-content {
+  padding: 16px;
+}
+
+.employee-card-content p {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+
+.employee-card-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Employee Form Styles */
+.form-header {
+  margin-bottom: 24px;
+}
+
+.form-header h2 {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.employee-form {
+  background-color: var(--bg-white);
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+}
+
+.form-layout {
+  display: flex;
+  gap: 32px;
+}
+
+.form-layout-mobile {
+  flex-direction: column;
+}
+
+.form-left {
+  flex: 1;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-right {
+  flex: 3;
+}
+
+.image-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-button {
+  width: 100px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-left {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .avatar-preview {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .employee-form {
+    padding: 16px;
+  }
+}
+
+/*---------------------------------
+  16. EMPLOYEE DETAIL VIEW STYLES
+---------------------------------*/
+.profileHeader {
+  margin-bottom: 24px;
+}
+
+.profileCard {
+  margin-bottom: 24px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profileAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.nameSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.employeeId {
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+.editButton {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.editButton:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.activitySection {
+  margin-top: 24px;
+}
+
+.activityHeader {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.activityCard {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+}
+
+.activityIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.activityItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.actionButton {
+  border-radius: 16px;
+}
+
+/* Responsive styles for employee detail view */
+@media (max-width: 768px) {
+  .profileInfo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .editButton {
+    margin-top: 16px;
+    width: 100%;
+  }
+
+  .activityItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actionButtons {
+    margin-top: 16px;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .profileAvatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .actionButtons {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .actionButton {
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+    padding: 0 8px;
+  }
+}
