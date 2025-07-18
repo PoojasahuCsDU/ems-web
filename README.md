@@ -1,4 +1,4 @@
-# Employee Management System (EMS) – Frontend
+# Employee Management System (EMS) 
 
 A modern, responsive web application for managing employees, admins, and projects within an organization. Built with **React.js (Vite)**, **Ant Design**, and a secure backend API, this project demonstrates robust frontend architecture, clean UI/UX, and seamless integration with RESTful services.
 
