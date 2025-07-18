@@ -33,9 +33,6 @@ Here are some screenshots showcasing the Employee Management System (EMS) app:
 - **Login Screen:** Secure authentication for admins and employees.
 - **Add Employee Screen:** Easily onboard new team members.
 - **Project Details Screen:** View comprehensive project information at a glance.
-  | Login Screen | Add Employee Screen | Project Details Screen |
-  | :----------: | :-----------------: | :-------------------: |
-  | ![Login](Employee-Management-System-Web/src/assets/png/login screen.png) | ![Add Employee](Employee-Management-System-Web/src/assets/png/adding employe.png) | ![Project Details](Employee-Management-System-Web/src/assets/png/project screen details.png) |
 
 ---
 
