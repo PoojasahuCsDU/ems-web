@@ -56,7 +56,7 @@ Here are some screenshots showcasing the Employee Management System (EMS) app:
 
 ```bash
 git clone <repository-url>
-cd ems-frontend
+cd ems-web
 npm install
 ```
 
